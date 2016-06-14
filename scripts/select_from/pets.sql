@@ -3,8 +3,8 @@
 
 SELECT
   kind,
-  count(*)
+  count(kind)
 FROM pets
-WHERE EXTRACT(YEAR FROM born_on) > 2010
+WHERE EXTRACT(YEAR FROM born_on) < 2010
 GROUP BY kind
 ORDER BY count DESC;
