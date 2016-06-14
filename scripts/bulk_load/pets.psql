@@ -1,4 +1,2 @@
 -- bulk load pet data
-\copy pets(born_on, kind, name)
-FROM 'data/pets.csv'
-WITH HEADER true, FORMAT csv);
+\copy pets(born_on, kind, name) FROM 'data/pets.csv' WITH (HEADER true, FORMAT csv);
